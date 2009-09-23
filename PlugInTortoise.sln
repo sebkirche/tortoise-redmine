@@ -1,0 +1,29 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 9.00
+# Visual Studio 2005
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TortoiseIssueList", "PlugInTortoise\TortoiseIssueList.csproj", "{6F1A5334-54D4-4D68-9A95-72D41B0E8087}"
+EndProject
+Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "Setup", "Setup3\Setup3.vdproj", "{D4E4AB85-4463-41C4-9989-5D5D01421869}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{6F1A5334-54D4-4D68-9A95-72D41B0E8087}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6F1A5334-54D4-4D68-9A95-72D41B0E8087}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6F1A5334-54D4-4D68-9A95-72D41B0E8087}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6F1A5334-54D4-4D68-9A95-72D41B0E8087}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D4E4AB85-4463-41C4-9989-5D5D01421869}.Debug|Any CPU.ActiveCfg = Debug
+		{D4E4AB85-4463-41C4-9989-5D5D01421869}.Debug|Any CPU.Build.0 = Debug
+		{D4E4AB85-4463-41C4-9989-5D5D01421869}.Release|Any CPU.ActiveCfg = Release
+		{D4E4AB85-4463-41C4-9989-5D5D01421869}.Release|Any CPU.Build.0 = Release
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		VisualSVNWorkingCopyRoot = 
+	EndGlobalSection
+EndGlobal

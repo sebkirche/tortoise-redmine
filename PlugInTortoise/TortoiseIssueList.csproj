@@ -1,0 +1,135 @@
+﻿<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.50727</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{6F1A5334-54D4-4D68-9A95-72D41B0E8087}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>TortoiseIssueList</RootNamespace>
+    <AssemblyName>TortoiseIssueList</AssemblyName>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <RegisterForComInterop>true</RegisterForComInterop>
+    <Version>$(BUILD_NUMBER)</Version>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="RssToolkit, Version=2.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>.\RssToolkit.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="About.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="About.Designer.cs">
+      <DependentUpon>About.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AfficheurAide.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="AfficheurAide.Designer.cs">
+      <DependentUpon>AfficheurAide.cs</DependentUpon>
+    </Compile>
+    <Compile Include="IBugTraqProvider.cs" />
+    <Compile Include="MyIssuesForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MyIssuesForm.Designer.cs">
+      <DependentUpon>MyIssuesForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PluginRedMine.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="TicketItem.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Service Include="{94E38DFF-614B-4cbd-B67C-F211BB35CE8B}" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="About.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>About.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AfficheurAide.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>AfficheurAide.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MyIssuesForm.resx">
+      <DependentUpon>MyIssuesForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <SubType>Designer</SubType>
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\IconeResize.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\button_ok.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cancel.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\messagebox_info.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\text.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ok_tbl.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\next_nav.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\next_nav1.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Redmine_web.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Redmine_web_pointage.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Condition="Exists('$(MSBuildExtensionsPath)\MSBuildCommunityTasks\MSBuild.Community.Tasks.Targets')" Project="$(MSBuildExtensionsPath)\MSBuildCommunityTasks\MSBuild.Community.Tasks.Targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+  <!--<UsingTask AssemblyName="$(MSBuildBinPath)\AssemblyInfoTask\AssemblyInfoTask.dll" TaskName="AssemblyInfo"/>-->
+  <Target Name="BeforeBuild">
+    <AssemblyInfo Condition="Exists('$(MSBuildExtensionsPath)\MSBuildCommunityTasks\MSBuild.Community.Tasks.Targets') AND '$(Version)'!=''" CodeLanguage="CS" OutputFile="$(MSBuildProjectDirectory)\Properties\AssemblyInfo.cs" AssemblyTitle="TortoiseIssueList" AssemblyDescription="TortoiseIssueList" AssemblyConfiguration="" AssemblyCompany="TortoiseIssueList" AssemblyProduct="TortoiseIssueList" AssemblyCopyright="Copyright (c) TortoiseIssueList, 2008" AssemblyTrademark="" ComVisible="false" CLSCompliant="true" Guid="de1d989b-e15f-4de6-9be9-6f6dc2aed99c" AssemblyVersion="$(Version)" AssemblyFileVersion="$(Version)" />
+  </Target>
+</Project>

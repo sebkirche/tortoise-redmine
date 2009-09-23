@@ -1,0 +1,9 @@
+REGEDIT4
+
+[-HKEY_CLASSES_ROOT\TortoiseIssueList.PluginRedMine]
+@="TortoiseIssueList.PluginRedMine"
+
+
+[-HKEY_CLASSES_ROOT\CLSID\{5870B3F1-8393-4C83-ACED-1D5E803A4F2B}]
+@="TortoiseIssueList.PluginRedMine"
+

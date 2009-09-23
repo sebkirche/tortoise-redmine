@@ -1,0 +1,30 @@
+REGEDIT4
+
+[HKEY_CLASSES_ROOT\TortoiseIssueList.PluginRedMine]
+@="TortoiseIssueList.PluginRedMine"
+
+[HKEY_CLASSES_ROOT\TortoiseIssueList.PluginRedMine\CLSID]
+@="{5870B3F1-8393-4C83-ACED-1D5E803A4F2B}"
+
+[HKEY_CLASSES_ROOT\CLSID\{5870B3F1-8393-4C83-ACED-1D5E803A4F2B}]
+@="TortoiseIssueList.PluginRedMine"
+
+[HKEY_CLASSES_ROOT\CLSID\{5870B3F1-8393-4C83-ACED-1D5E803A4F2B}\InprocServer32]
+@="mscoree.dll"
+"ThreadingModel"="Both"
+"Class"="TortoiseIssueList.PluginRedMine"
+"Assembly"="TortoiseIssueList, Version=1.0.3170.12235, Culture=neutral, PublicKeyToken=null"
+"RuntimeVersion"="v2.0.50727"
+"CodeBase"="file:///D:/Privé/blarat/Visual Studio 2005/Projects/PlugInTortoise/PlugInTortoise/bin/Debug/TortoiseIssueList.dll"
+
+[HKEY_CLASSES_ROOT\CLSID\{5870B3F1-8393-4C83-ACED-1D5E803A4F2B}\InprocServer32\1.0.3170.12235]
+"Class"="TortoiseIssueList.PluginRedMine"
+"Assembly"="TortoiseIssueList, Version=1.0.3170.12235, Culture=neutral, PublicKeyToken=null"
+"RuntimeVersion"="v2.0.50727"
+"CodeBase"="file:///D:/Privé/blarat/Visual Studio 2005/Projects/PlugInTortoise/PlugInTortoise/bin/Debug/TortoiseIssueList.dll"
+
+[HKEY_CLASSES_ROOT\CLSID\{5870B3F1-8393-4C83-ACED-1D5E803A4F2B}\ProgId]
+@="TortoiseIssueList.PluginRedMine"
+
+[HKEY_CLASSES_ROOT\CLSID\{5870B3F1-8393-4C83-ACED-1D5E803A4F2B}\Implemented Categories\{62C8FE65-4EBB-45E7-B440-6E39B2CDBF29}]
+[HKEY_CLASSES_ROOT\CLSID\{5870B3F1-8393-4C83-ACED-1D5E803A4F2B}\Implemented Categories\{3494FA92-B139-4730-9591-01135D5E7831}] 
