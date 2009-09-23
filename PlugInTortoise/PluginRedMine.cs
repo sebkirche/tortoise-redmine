@@ -135,7 +135,7 @@ namespace TortoiseIssueList
                 Uri url = new Uri(FeedsUrl);
 
                 _rssDoc = RssDocument.Load(url);
-
+                Tickets.Clear();
                 for (int i = 0; i < _rssDoc.Channel.Items.Count; i++)
                 {
                     Tickets.Add(CreerTicketDepuisTitre(_rssDoc.Channel.Items[i].Title,
